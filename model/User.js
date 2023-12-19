@@ -1,7 +1,7 @@
 const Query = require('../utililties/queryHelper');
 
 class User {
-    async registerUser(user) {
+    async registerUser(user,flag) {
         const { name, age, phone, email, current_batch, start_date, password } = user;
         const query = `
             INSERT INTO users (name, age, phone, email, current_batch, start_date) 

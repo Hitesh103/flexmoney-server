@@ -28,7 +28,9 @@ class RegisterController {
                 start_date,
             };
 
-            const registrationResult = await User.registerUser(newUser);
+            let flag = true;
+
+            const registrationResult = await User.registerUser(newUser,flag);
 
             if (registrationResult.affectedRows > 0) {
                 return res.status(201).json({ message: 'Registration successful' });
