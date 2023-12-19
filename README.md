@@ -60,16 +60,26 @@ Status code: `200 OK`
 Method: `POST` 
 Endpoint: `/api/users` 
 
-Request Body: \
-`name` (string, required) \
-`age` (integer, required) \
-`phone` (string, required) \
-`email` (string, required, unique) \
-`batch` (integer, required, reference to batches table) \
-`date` (date, required) 
+Request Body: 
 
-Response: \ 
-Status code: \
-`201 Created`: Registration successful, returns JSON object with user details (ID, name, etc.) \
-`400 Bad Request`: Invalid input data, returns error message \
+`name` (string, required) 
+
+`age` (integer, required) 
+
+`phone` (string, required) 
+
+`email` (string, required, unique) 
+
+`batch` (integer, required, reference to batches table) 
+
+`start_date` (date, required) 
+
+Response: 
+
+Status code: 
+
+`201 Created`: Registration successful, returns JSON object with user details (ID, name, etc.) 
+
+`400 Bad Request`: Invalid input data, returns error message 
+
 `409 Conflict`: Email already exists, returns error message
